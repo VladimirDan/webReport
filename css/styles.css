@@ -1,0 +1,178 @@
+body {
+  background-color: #ccd2bc;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a:active,
+a:focus,
+a:hover {
+  color: black;
+  background-color: rgb(24, 156, 24);
+}
+
+.title {
+  border: black 1px solid;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title p:first-child {
+  text-transform: uppercase;
+}
+
+.title p {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.title span {
+  text-decoration: underline;
+}
+
+.kpi {
+  height: 70px;
+  width: 70px;
+}
+
+.StudentPhoto {
+  height: 140px;
+  width: 140px;
+}
+
+.title-text {
+  margin-left: auto;
+  margin-right: auto;
+  flex-grow: 1;
+}
+
+.labs {
+  border: black 1px solid;
+  border-radius: 5px;
+  display: flex;
+  padding: 5px;
+  justify-content: space-around;
+  flex-basis: auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  padding: 15px 0;
+  margin-bottom: 10px;
+}
+
+.labs-content {
+  display: flex;
+}
+
+.lab {
+  border: black 1px solid;
+  border-radius: 5px;
+  padding: 0 60px;
+}
+
+.list {
+  border: black 1px solid;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px;
+  max-width: 400px;
+  max-height: 300px;
+  width: 100%;
+  margin-right: 15px;
+}
+
+.list-item {
+  border: black 1px solid;
+  border-radius: 5px;
+  flex: 2 1 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.list-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.list-content {
+  border: black 1px solid;
+  border-radius: 5px;
+  flex-grow: 1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  height: 500px;
+  padding: 10px 15px 0 15px;
+}
+
+.list-content h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.list-content h3:first-child {
+  margin-bottom: 10px;
+}
+
+.list-content p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin-left: 15px;
+}
+
+.list-content a:hover,
+a:focus,
+a:active {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.git {
+  text-decoration: underline;
+}
+
+.list-content li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.list-content ul:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.list-content .elements {
+  text-align: center;
+}
+
+td:not(:last-child) {
+  width: 15%;
+}
+
+#id {
+  border-collapse: collapse;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 0 5px 5px;
+}
+
+td:first-child {
+  text-align: center;
+}
