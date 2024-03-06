@@ -1,26 +1,21 @@
 body {
-  background-color: #ccd2bc;
+  background-color: #f0f0f0;
 }
 
 a {
-  text-decoration: none;
-  color: black;
-}
-
-h3 {
-  margin: 0;
-  padding: 0;
+  text-decoration: underline;
+  color: #333;
 }
 
 a:active,
 a:focus,
 a:hover {
-  color: black;
+  color: #333;
   background-color: rgb(24, 156, 24);
 }
 
 .title {
-  border: black 1px solid;
+  border: 2px solid #333;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -33,7 +28,7 @@ a:hover {
 
 .title p {
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: Arial, sans-serif;
   font-weight: 700;
 }
 
@@ -57,35 +52,28 @@ a:hover {
   flex-grow: 1;
 }
 
-.labs {
-  border: black 1px solid;
+.labs,
+.lab,
+.list {
+  border: 2px solid #333;
   border-radius: 5px;
+}
+
+.labs {
   display: flex;
-  padding: 5px;
-  justify-content: space-around;
-  flex-basis: auto;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
   padding: 15px 0;
+  justify-content: space-around;
   margin-bottom: 10px;
 }
 
-.labs-content {
-  display: flex;
-}
-
 .lab {
-  border: black 1px solid;
-  border-radius: 5px;
   padding: 0 60px;
 }
 
 .list {
-  border: black 1px solid;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  padding: 15px 15px;
+  padding: 15px;
   max-width: 400px;
   max-height: 300px;
   width: 100%;
@@ -93,42 +81,36 @@ a:hover {
 }
 
 .list-item {
-  border: black 1px solid;
+  border: 1px solid #333;
   border-radius: 5px;
   flex: 2 1 auto;
   justify-content: center;
   align-items: center;
   display: flex;
-  font-family: "Montserrat", sans-serif;
+  font-family: Arial, sans-serif;
   font-weight: 400;
-}
-
-.list-item:not(:last-child) {
   margin-bottom: 15px;
 }
 
 .list-content {
-  border: black 1px solid;
+  border: 2px solid #333;
   border-radius: 5px;
   flex-grow: 1;
-  font-family: "Montserrat", sans-serif;
+  font-family: Arial, sans-serif;
   font-weight: 400;
   height: 500px;
   padding: 10px 15px 0 15px;
 }
 
 .list-content h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: Arial, sans-serif;
   font-weight: 700;
   text-align: center;
-}
-
-.list-content h3:first-child {
   margin-bottom: 10px;
 }
 
 .list-content p {
-  font-family: "Montserrat", sans-serif;
+  font-family: Arial, sans-serif;
   font-weight: 400;
   margin-left: 15px;
 }
@@ -137,10 +119,6 @@ a:hover {
 a:focus,
 a:active {
   background-color: transparent;
-  text-decoration: underline;
-}
-
-.git {
   text-decoration: underline;
 }
 
@@ -162,13 +140,13 @@ td:not(:last-child) {
 
 #id {
   border-collapse: collapse;
-  border: 1px solid black;
+  border: 1px solid #333;
   border-radius: 5px;
 }
 
 th,
 td {
-  border: 1px solid black;
+  border: 1px solid #333;
   border-radius: 5px;
   padding: 5px 0 5px 5px;
 }
