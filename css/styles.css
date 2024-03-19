@@ -75,7 +75,7 @@ a:hover {
   flex-direction: column;
   padding: 15px;
   max-width: 400px;
-  max-height: 300px;
+  
   width: 100%;
   margin-right: 15px;
 }
@@ -98,7 +98,7 @@ a:hover {
   flex-grow: 1;
   font-family: Arial, sans-serif;
   font-weight: 400;
-  height: 500px;
+  height: auto;
   padding: 10px 15px 0 15px;
 }
 
