@@ -73,41 +73,30 @@
           <a href="conclusions.html" class="list-item">Висновки</a>
         </div>
         <div class="list-content">
-          <h3>
-            Тема: КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ .ІДЕНТИФІКАТОРИ. СТИЛЬОВЕ
-ОФОРМЛЕННЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ В HTML-ДОКУМЕНТАХ.
-          </h3>
-          <h2>
-            Мета:
-          </h2>
-		  <ol>
-            <li>придбати практичні навички роботи з селекторами,.</li>
-            <li>ідентифікаторами,</li>
-            <li>списками,</li>
-            <li>різноманітними властивостями кольору і фону,</li>
-            <li>зовнішними та
-внутрішними відступами,</li>
-            <li>плаваючими елементами,.</li>
-        </ol>
-          <p>
-            Код сторінки розміщений в репозиторії
-            <a
-              class="git"
-              href="https://vladimirdan.github.io/ZombieTrailerParkLandingPage/"
-              target="_blank"
-              >GitHub</a
-            >
-          </p>
-		  
-		  <p>
-            Резюме
-            <a
-              class="git"
-              href="https://vladimirdan.github.io/ResumeWEB/"
-              target="_blank"
-              >GitHub</a
-            >
-          </p>
+         <div>
+    <h2>Способи підключення стилів CSS</h2>
+    <ol>
+        <li>
+            <strong>Внутрішній CSS (Inline CSS)</strong> - стилі вписуються прямо в атрибут <code>style</code> HTML-елемента.
+            <br><code>&lt;p style="color: red;"&gt;Текст&lt;/p&gt;</code>
+        </li>
+        <li>
+            <strong>Вбудовані стилі (Internal CSS)</strong> - стилі розміщуються у тегу <code>&lt;style&gt;</code> в <code>&lt;head&gt;</code> секції документа.
+            <br>
+            <pre><code>&lt;style&gt;
+    p { color: red; }
+&lt;/style&gt;</code></pre>
+        </li>
+        <li>
+            <strong>Зовнішні стилі (External CSS)</strong> - стилі зберігаються в окремому файлі <code>.css</code>, який підключається за допомогою <code>&lt;link&gt;</code>.
+            <br><code>&lt;link rel="stylesheet" href="style.css"&gt;</code>
+        </li>
+        <li>
+            <strong>Імпорт CSS</strong> - використання <code>@import</code> у CSS-файлі для підключення інших CSS-файлів.
+            <br><code>@import url("style.css");</code>
+        </li>
+    </ol>
+</div>
         </div>
       </div>
     </main>
