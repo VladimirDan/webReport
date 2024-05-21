@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="title">
+      <img class="kpi" src="../images/kpi-symbol.png" alt="" />
+      <div class="title-text">
+        <p>
+          звіти з лабораторних робіт <br />
+          з дисципліни "інтернет-технології та проектування web-застосувань"
+        </p>
+        <p>Студента групи ІМ-13 <span>Даніленко Володимир Володимирович</span></p>
+      </div>
+	  <img class="StudentPhoto" src="../images/me.jpg" alt="Student photo" />
+    </header>
+    <main>
+      <div class="labs">
+        <a href="1lab.html" class="lab">Лаба №1</a>
+        <a href="2lab.html" class="lab">Лаба №2</a>
+        <a href="3lab.html" class="lab">Лаба №3</a>
+        <a href="4lab.html" class="lab">Лаба №4</a>
+        <a href="5lab.html" class="lab">Лаба №5</a>
+        <a href="6lab.html" class="lab">Лаба №6</a>
+        <a href="7lab.html" class="lab">Лаба №7</a>
+        <a href="8lab.html" class="lab">Лаба №8</a>
+        <a href="9lab.html" class="lab">Лаба №9</a>
+      </div>
+      <div class="labs-content">
+       <div class="list">
+          <a href="topic-aim.html" class="list-item">Тема, мета, місце розташування лаби</a>
+          <a href="task2_5-1.html" class="list-item">Завдання 2 5.1</a>
+          <a href="task4_5-1.html" class="list-item">Завдання 4 5.1</a>
+          <a href="task6_5-1.html" class="list-item">Завдання 6 5.1</a>
+          <a href="task8_5-1.html" class="list-item">Завдання 8 5.1</a>
+          <a href="task9_5-1.html" class="list-item">Завдання 9 5.1</a>
+          <a href="task10_5-1.html" class="list-item">Завдання 10 5.1</a>
+          <a href="task2_6.html" class="list-item">Завдання 2 6</a>
+          <a href="task4_6.html" class="list-item">Завдання 4 6</a>
+          <a href="task6_6.html" class="list-item">Завдання 6 6</a>
+          <a href="task7_6.html" class="list-item">Завдання 7 6</a>
+          <a href="task8_6.html" class="list-item">Завдання 8 6</a>
+          <a href="task9_6.html" class="list-item">Завдання 9 6</a>
+          <a href="task10_6.html" class="list-item">Завдання 10 6</a>
+          <a href="conclusions.html" class="list-item">Висновки</a>
+        </div>
+		<div></div>
+    <div class="list-content">
+         <h2>Умова 10 завданяя</h2>
+         <p>Напиши скрипт створення й очищення колекції елементів з наступним функціоналом.
+          Є input, у який користувач вводить бажану кількість елементів. Після натискання на кнопку Create має рендеритися (додаватися в DOM) колекція з відповідною кількістю елементів і очищатися значення в інпуті. При повторному натисканні на кнопку Create поверх старої колекції має рендеритись нова. Після натискання на кнопку Destroy колекція елементів має очищатися.
+          </p>
+          
+          <p>Після натискання користувачем на кнопку Create треба провалідувати значення в input, воно має бути в межах від 1 до 100 включно. Тільки якщо воно задоволяє умову, мають додаватися нові дів елементи в DOM.
+            Для рендеру елементів на сторінці створи функцію createBoxes(amount), яка приймає один параметр — число, що зберігає кількість елементів для рендеру. Функція має створювати стільки дів елементів, скільки вказано в параметрі amount і додавати їх у DOM дочірніми елементами для div#boxes.
+            </p>
+          <ol>
+            <li>Розміри першого <div> елемента мають бути 30px на 30px.</li>
+            <li>Кожен наступний елемент повинен бути ширшим і вищим від попереднього на 10px.</li>
+            <li>Усі елементи повинні мати випадковий колір фону. Використовуй готову функцію getRandomHexColor() для отримання випадкового кольору.</li>
+          </ol>
+         
+          <p>Для очищення колекції після натискання на кнопку Destroy створи функцію destroyBoxes(), яка очищає вміст div#boxes, у такий спосіб видаляючи всі створені елементи.</p>
+         <h2>Виконання 10 завдання</h2>
+         <div id="controls">
+          <input type="number" min="1" max="100" step="1" />
+          <button type="button" data-create>Create</button>
+          <button type="button" data-destroy>Destroy</button>
+        </div>
+        
+        <div id="boxes"></div>
+        
+         
+        </div>
+      </div>
+      <script>
+        function getRandomHexColor() {
+          return `#${Math.floor(Math.random() * 16777215)
+            .toString(16)
+            .padStart(6, 0)}`;
+        }
+        
+        function createBoxes(amount) {
+          const boxesContainer = document.querySelector('#boxes');
+          boxesContainer.innerHTML = '';
+        
+          for (let i = 0; i < amount; i++) {
+            const box = document.createElement('div');
+            box.style.width = `${30 + i * 10}px`;
+            box.style.height = `${30 + i * 10}px`;
+            box.style.backgroundColor = getRandomHexColor();
+            boxesContainer.appendChild(box);
+          }
+        }
+        
+        function destroyBoxes() {
+          document.querySelector('#boxes').innerHTML = '';
+        }
+        
+        document.querySelector('[data-create]').addEventListener('click', function() {
+          const input = document.querySelector('input[type="number"]');
+          const amount = input.value;
+        
+          if (amount < 1 || amount > 100) {
+            alert('Введіть число від 1 до 100');
+            return;
+          }
+        
+          createBoxes(amount);
+          input.value = '';
+        });
+        
+        document.querySelector('[data-destroy]').addEventListener('click', destroyBoxes);
+        
+      </script>
+    </main>
+  </body>
+</html>

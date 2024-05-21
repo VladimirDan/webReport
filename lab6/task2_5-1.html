@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="title">
+      <img class="kpi" src="../images/kpi-symbol.png" alt="" />
+      <div class="title-text">
+        <p>
+          звіти з лабораторних робіт <br />
+          з дисципліни "інтернет-технології та проектування web-застосувань"
+        </p>
+        <p>Студента групи ІМ-13 <span>Даніленко Володимир Володимирович</span></p>
+      </div>
+	  <img class="StudentPhoto" src="../images/me.jpg" alt="Student photo" />
+    </header>
+    <main>
+      <div class="labs">
+        <a href="1lab.html" class="lab">Лаба №1</a>
+        <a href="2lab.html" class="lab">Лаба №2</a>
+        <a href="3lab.html" class="lab">Лаба №3</a>
+        <a href="4lab.html" class="lab">Лаба №4</a>
+        <a href="5lab.html" class="lab">Лаба №5</a>
+        <a href="6lab.html" class="lab">Лаба №6</a>
+        <a href="7lab.html" class="lab">Лаба №7</a>
+        <a href="8lab.html" class="lab">Лаба №8</a>
+        <a href="9lab.html" class="lab">Лаба №9</a>
+      </div>
+      <div class="labs-content">
+       <div class="list">
+          <a href="topic-aim.html" class="list-item">Тема, мета, місце розташування лаби</a>
+          <a href="task2_5-1.html" class="list-item">Завдання 2 5.1</a>
+          <a href="task4_5-1.html" class="list-item">Завдання 4 5.1</a>
+          <a href="task6_5-1.html" class="list-item">Завдання 6 5.1</a>
+          <a href="task8_5-1.html" class="list-item">Завдання 8 5.1</a>
+          <a href="task9_5-1.html" class="list-item">Завдання 9 5.1</a>
+          <a href="task10_5-1.html" class="list-item">Завдання 10 5.1</a>
+          <a href="task2_6.html" class="list-item">Завдання 2 6</a>
+          <a href="task4_6.html" class="list-item">Завдання 4 6</a>
+          <a href="task6_6.html" class="list-item">Завдання 6 6</a>
+          <a href="task7_6.html" class="list-item">Завдання 7 6</a>
+          <a href="task8_6.html" class="list-item">Завдання 8 6</a>
+          <a href="task9_6.html" class="list-item">Завдання 9 6</a>
+          <a href="task10_6.html" class="list-item">Завдання 10 6</a>
+          <a href="conclusions.html" class="list-item">Висновки</a>
+        </div>
+		<div></div>
+    <div class="list-content">
+          <h4>Завдання №2:</h4>
+          <p>
+            Напишіть функцію getProductDetails, яка приймає ідентифікатор товару productId та дві колбек-функції successCallback та errorCallback.
+
+// Функція getProductDetails повинна отримати деталі про вказаний товар та передати їх у successCallback.
+
+// У випадку якщо товар не знайдено, викликається errorCallback і передається повідомлення про помилку.
+
+          </p>
+          <h4>Код JavaScript:</h4>
+          <code>
+          const productsDatabase = {
+  1: { id: 1, name: "Laptop", price: 1000 },
+  2: { id: 2, name: "Phone", price: 500 },
+  3: { id: 3, name: "Tablet", price: 300 },
+};
+
+function getProductDetails(productId, successCallback, errorCallback) {
+  setTimeout(() => {
+    const product = productsDatabase[productId];
+    if (product) {
+      successCallback(product);
+    } else {
+      errorCallback(`Product with ID ${productId} not found.`);
+    }
+  }, 1000);
+}
+
+function onSuccess(product) {
+  console.log("Product details:", product);
+}
+
+function onError(errorMessage) {
+  console.error("Error:", errorMessage);
+}
+
+getProductDetails(1, onSuccess, onError);
+getProductDetails(4, onSuccess, onError);
+
+          </code>
+
+          <h4>Приклад використання:</h4>
+          <xmp
+>
+            Перевірка функції getProductDetails
+            getProductDetails(1, onSuccess, onError); Має вивести деталі товару з ID 1
+            getProductDetails(4, onSuccess, onError); Має вивести помилку, оскільки товару з ID 4 немає
+          </xmp>
+        </div>
+      </div>
+    </main>
+
+    <script>
+     const productsDatabase = {
+  1: { id: 1, name: "Laptop", price: 1000 },
+  2: { id: 2, name: "Phone", price: 500 },
+  3: { id: 3, name: "Tablet", price: 300 },
+};
+
+function getProductDetails(productId, successCallback, errorCallback) {
+  setTimeout(() => {
+    const product = productsDatabase[productId];
+    if (product) {
+      successCallback(product);
+    } else {
+      errorCallback(`Product with ID ${productId} not found.`);
+    }
+  }, 1000);
+}
+
+function onSuccess(product) {
+  console.log("Product details:", product);
+}
+
+function onError(errorMessage) {
+  console.error("Error:", errorMessage);
+}
+
+getProductDetails(1, onSuccess, onError);
+getProductDetails(4, onSuccess, onError);
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+	 <style>
+        .mcont {
+            background-color: #d0e8d0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 20px;
+            padding: 20px;
+        }
+        .square {
+            width: 100px;
+            height: 100px;
+            border: 2px dashed red;
+            margin-bottom: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <header class="title">
+      <img class="kpi" src="../images/kpi-symbol.png" alt="" />
+      <div class="title-text">
+        <p>
+          звіти з лабораторних робіт <br />
+          з дисципліни "інтернет-технології та проектування web-застосувань"
+        </p>
+        <p>Студента групи ІМ-13 <span>Даніленко Володимир Володимирович</span></p>
+      </div>
+	  <img class="StudentPhoto" src="../images/me.jpg" alt="Student photo" />
+    </header>
+    <main>
+      <div class="labs">
+        <a href="1lab.html" class="lab">Лаба №1</a>
+        <a href="2lab.html" class="lab">Лаба №2</a>
+        <a href="3lab.html" class="lab">Лаба №3</a>
+        <a href="4lab.html" class="lab">Лаба №4</a>
+        <a href="5lab.html" class="lab">Лаба №5</a>
+        <a href="6lab.html" class="lab">Лаба №6</a>
+        <a href="7lab.html" class="lab">Лаба №7</a>
+        <a href="8lab.html" class="lab">Лаба №8</a>
+        <a href="9lab.html" class="lab">Лаба №9</a>
+      </div>
+      <div class="labs-content">
+       <div class="list">
+          <a href="topic-aim.html" class="list-item">Тема, мета, місце розташування лаби</a>
+          <a href="task2_5-1.html" class="list-item">Завдання 2 5.1</a>
+          <a href="task4_5-1.html" class="list-item">Завдання 4 5.1</a>
+          <a href="task6_5-1.html" class="list-item">Завдання 6 5.1</a>
+          <a href="task8_5-1.html" class="list-item">Завдання 8 5.1</a>
+          <a href="task9_5-1.html" class="list-item">Завдання 9 5.1</a>
+          <a href="task10_5-1.html" class="list-item">Завдання 10 5.1</a>
+          <a href="task2_6.html" class="list-item">Завдання 2 6</a>
+          <a href="task4_6.html" class="list-item">Завдання 4 6</a>
+          <a href="task6_6.html" class="list-item">Завдання 6 6</a>
+          <a href="task7_6.html" class="list-item">Завдання 7 6</a>
+          <a href="task8_6.html" class="list-item">Завдання 8 6</a>
+          <a href="task9_6.html" class="list-item">Завдання 9 6</a>
+          <a href="task10_6.html" class="list-item">Завдання 10 6</a>
+          <a href="conclusions.html" class="list-item">Висновки</a>
+        </div>
+		<div></div>
+  <div class="list-content" style="height: 100%">
+          <h4>Завдання №4:</h4>
+          <p>
+    	У звітному HTML-документі створити html-розміту, яка складається з наступних елементів : текст, блок (div), дві кнопки.  Кнопка "Зменшити" робить квадрат менше на 15 пікселів. 
+Повторний натиск на кнопці Зменшити"    робить квадрат ще менше на 15 пікселів.
+ 
+"Збільшити" – робить квадрат більше на 15 пікселів. Повторний натиск на кнопці "Зменшити"    робить квадрат ще більше на 15 пікселів.
+
+
+
+
+
+	</p>
+	<p>Виконання коду</p>
+	<div class="mcont">
+    <div class="container">
+        <h2>ЗАВДАННЯ 4</h2>
+        <div class="square" id="square"></div>
+        <button id="decreaseButton">Зменшити</button>
+        <button id="increaseButton">Збільшити</button>
+    </div>
+  </div>
+	  
+
+    	<script>
+        
+const square = document.getElementById('square');
+const decreaseButton = document.getElementById('decreaseButton');
+const increaseButton = document.getElementById('increaseButton');
+
+
+const changeSize = (delta) => {
+    
+    let currentSize = parseInt(window.getComputedStyle(square).width);
+
+   
+    let newSize = currentSize + delta;
+
+    
+    square.style.width = newSize + 'px';
+    square.style.height = newSize + 'px';
+
+    
+    console.log('New size:', newSize + 'px');
+};
+
+
+decreaseButton.addEventListener('click', () => changeSize(-15));
+increaseButton.addEventListener('click', () => changeSize(15));
+
+    	</script>
+      </div>
+    </main>
+  </body>
+</html>

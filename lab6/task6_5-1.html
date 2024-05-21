@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="title">
+      <img class="kpi" src="../images/kpi-symbol.png" alt="" />
+      <div class="title-text">
+        <p>
+          звіти з лабораторних робіт <br />
+          з дисципліни "інтернет-технології та проектування web-застосувань"
+        </p>
+        <p>Студента групи ІМ-13 <span>Даніленко Володимир Володимирович</span></p>
+      </div>
+	  <img class="StudentPhoto" src="../images/me.jpg" alt="Student photo" />
+    </header>
+    <main>
+      <div class="labs">
+        <a href="1lab.html" class="lab">Лаба №1</a>
+        <a href="2lab.html" class="lab">Лаба №2</a>
+        <a href="3lab.html" class="lab">Лаба №3</a>
+        <a href="4lab.html" class="lab">Лаба №4</a>
+        <a href="5lab.html" class="lab">Лаба №5</a>
+        <a href="6lab.html" class="lab">Лаба №6</a>
+        <a href="7lab.html" class="lab">Лаба №7</a>
+        <a href="8lab.html" class="lab">Лаба №8</a>
+        <a href="9lab.html" class="lab">Лаба №9</a>
+      </div>
+      <div class="labs-content">
+       <div class="list">
+          <a href="topic-aim.html" class="list-item">Тема, мета, місце розташування лаби</a>
+          <a href="task2_5-1.html" class="list-item">Завдання 2 5.1</a>
+          <a href="task4_5-1.html" class="list-item">Завдання 4 5.1</a>
+          <a href="task6_5-1.html" class="list-item">Завдання 6 5.1</a>
+          <a href="task8_5-1.html" class="list-item">Завдання 8 5.1</a>
+          <a href="task9_5-1.html" class="list-item">Завдання 9 5.1</a>
+          <a href="task10_5-1.html" class="list-item">Завдання 10 5.1</a>
+          <a href="task2_6.html" class="list-item">Завдання 2 6</a>
+          <a href="task4_6.html" class="list-item">Завдання 4 6</a>
+          <a href="task6_6.html" class="list-item">Завдання 6 6</a>
+          <a href="task7_6.html" class="list-item">Завдання 7 6</a>
+          <a href="task8_6.html" class="list-item">Завдання 8 6</a>
+          <a href="task9_6.html" class="list-item">Завдання 9 6</a>
+          <a href="task10_6.html" class="list-item">Завдання 10 6</a>
+          <a href="conclusions.html" class="list-item">Висновки</a>
+        </div>
+		<div></div>
+      <div class="list-content">
+          <h4>Завдання №6:</h4>
+          <p>
+            Напишіть функцію, яка приймає массив об'єктів і повертає новий
+            массив об'єктів,у якому є знижка на 30 % на всі медикаменти ціна,
+            яких перевищує 300 грн у масиві Надайте ід для кожного медикамента
+            const medicines = [ { name: "Noshpa", price: 170 }, { name:
+            "Analgin", price: 55 }, { name: "Quanil", price: 310 }, { name:
+            "Alphacholine", price: 390 }, ];
+          </p>
+          
+
+          <h4>Приклад використання:</h4>
+          <xmp>
+            Ввиведення результату
+            const updatedMedicines = applyDiscountAndAssignId(medicines);
+            console.log(updatedMedicines);
+          </xmp>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const medicines = [
+  { name: "Noshpa", price: 170 },
+  { name: "Analgin", price: 55 },
+  { name: "Quanil", price: 310 },
+  { name: "Alphacholine", price: 390 },
+];
+
+const applyDiscountAndAssignId = (medicines) => {
+  return medicines.map((medicine, index) => {
+    const updatedMedicine = { ...medicine, id: index + 1 };
+    if (medicine.price > 300) {
+      updatedMedicine.price = medicine.price * 0.7;
+    }
+    return updatedMedicine;
+  });
+};
+
+const updatedMedicines = applyDiscountAndAssignId(medicines);
+console.log(updatedMedicines);
+
+    </script>
+  </body>
+</html>
